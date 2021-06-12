@@ -39,12 +39,16 @@ $title = "Crawler Emporium"
                 <div class="card-header text-center"><img src="./assets/5eCrawler.png" class="mini-image" alt=""/>
                     5eCrawler
                 </div>
-                <div class="card-body">
-                    <p class="card-text">Easily and quickly lookup your D&D 5th edition (SRD Only) information, right inside Discord.</p>
+                <div class="card-body card-body-height">
+                    <p class="card-text">
+                        A verified Discord bot, included in over 2000 server.
+                        <br/><br/>
+                        Which lets you easily and quickly lookup your D&D 5th edition (SRD Only) information, right inside Discord.
+                    </p>
                 </div>
             </a>
             <div class="card-footer text-center">
-                <a class="btn btn-dark" href="https://discordapp.com/oauth2/authorize?client_id=559331529378103317&scope=bot&permissions=536977472">Invite 5eCrawler</a>
+                <a class="btn btn-dark add_to_discord text-center" href="https://discordapp.com/oauth2/authorize?client_id=559331529378103317&scope=bot&permissions=536977472">Invite 5eCrawler</a>
             </div>
         </div>
 
@@ -53,12 +57,17 @@ $title = "Crawler Emporium"
                 <div class="card-header text-center"><img src="./assets/DiscordCrawler.png" class="mini-image" alt=""/>
                     DiscordCrawler
                 </div>
-                <div class="card-body">
-                    <p class="card-text">Moderation tools, blacklist certain words, and other cool features for your Discord server.</p>
+                <div class="card-body card-body-height">
+                    <p class="card-text">
+                        Moderation tools<br/>
+                        Anonymous reports for staff<br/>
+                        Nudging of messages to channels<br/><br/>
+                        And other cool features for your Discord server.
+                    </p>
                 </div>
             </a>
             <div class="card-footer text-center">
-                <a class="btn btn-dark" href="https://discordapp.com/oauth2/authorize?client_id=602774912595263490&scope=bot&permissions=805412928">Invite DiscordCrawler </a>
+                <a class="btn btn-dark add_to_discord" href="https://discordapp.com/oauth2/authorize?client_id=602774912595263490&scope=bot&permissions=805412928">Invite DiscordCrawler </a>
             </div>
         </div>
 
@@ -67,12 +76,12 @@ $title = "Crawler Emporium"
                 <div class="card-header text-center"><img src="./assets/IssueCrawler.png" class="mini-image" alt=""/>
                     IssueCrawler
                 </div>
-                <div class="card-body">
-                    <p class="card-text">A fully featured issue and/or feature tracking for Discord, with optional link to your Github Repo.</p>
+                <div class="card-body card-body-height">
+                    <p class="card-text">A fully featured issue and/or feature tracking for Discord, packed with features for you project!<br/><br/>Optionally linked to your Github Repo.</p>
                 </div>
             </a>
             <div class="card-footer text-center">
-                <a class="btn btn-dark" href="https://discord.com/oauth2/authorize?client_id=602779023151595546&scope=bot&permissions=388176=536977472">Invite IssueCrawler</a>
+                <a class="btn btn-dark add_to_discord" href="https://discord.com/oauth2/authorize?client_id=602779023151595546&scope=bot&permissions=388176=536977472">Invite IssueCrawler</a>
             </div>
         </div>
     </div>

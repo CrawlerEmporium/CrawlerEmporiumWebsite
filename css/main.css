@@ -52,6 +52,10 @@ body {
     max-width: 18rem !important;
 }
 
+.card-body-height {
+    height:200px !important;
+}
+
 .tab {
     margin-left: 20px;
 }
@@ -144,7 +148,6 @@ ul.social-icons {
 .add_to_discord {
     display: flex;
     align-items: center;
-    background-color: blueviolet;
     border-radius: 8px;
     border: 0;
     font-weight: 600;
@@ -162,7 +165,8 @@ ul.social-icons {
 }
 
 .add_to_discord:hover {
-    background-color: rgb(152, 67, 233);
+    background-color: rgb(145, 204, 255);
+    color: #000000;
     text-decoration: none;
 }
 
