@@ -13,6 +13,7 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
 // commands search script
 $(document).ready(function(){
     $("#myInput").on("keyup", function() {

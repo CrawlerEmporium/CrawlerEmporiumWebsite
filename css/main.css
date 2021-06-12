@@ -1,5 +1,4 @@
 body {
-    font-family: 'Poppins', sans-serif !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -36,11 +35,11 @@ body {
 }
 
 .card {
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
 }
 
 .card:hover {
-    border: 2px solid black;
+    border: 2px solid #212529;
 }
 
 .cardds {
@@ -175,7 +174,7 @@ ul.social-icons {
 }
 
 .commandssub {
-    color: gray;
+    color: #808080;
 }
 
 .searchbox {
@@ -252,7 +251,6 @@ ul.social-icons {
 .content h4 {
     margin-top: 12px;
     font-size: 20px;
-    font-family: 'Cairo';
 }
 
 .card {
@@ -376,6 +374,10 @@ ul.social-icons {
 .card .actions .follow-btn button:active {
     background-color: #e8a200;
     transform: scale(1);
+}
+
+.text-gray {
+    color: #cccccc;
 }
 
 .licetitle {

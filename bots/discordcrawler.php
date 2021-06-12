@@ -8,7 +8,8 @@ if (isset($mongoDB)) {
 
 $commands = $db->find(['bots' => 'discord', "disabled" => null]);
 
-$title = "DiscordCrawler"
+$title = "DiscordCrawler";
+$prefix = "$";
 ?>
 <!DOCTYPE html>
 <html lang="en">
