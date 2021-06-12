@@ -37,7 +37,8 @@ final class Versions
   'jean85/pretty-package-versions' => '1.6.0@1e0104b46f045868f11942aea058cd7186d6c303',
   'mongodb/mongodb' => '1.8.0@953dbc19443aa9314c44b7217a16873347e6840d',
   'symfony/polyfill-php80' => 'v1.23.0@eca0bf41ed421bed1b57c4958bab16aa86b757d0',
-  '__root__' => '1.0.0+no-version-set@',
+  'xwilarg/discord-oauth2-php' => 'v1.5@763c5c3397c1a8078a1e44326c858d5620dbedf8',
+  '__root__' => 'dev-main@4ccf15f9562bc41c64df3643fccaef4faa7a7311',
 );
 
     private function __construct()

@@ -1,5 +1,6 @@
 {
     "require": {
-        "mongodb/mongodb": "^1.8"
+        "mongodb/mongodb": "^1.8",
+        "xwilarg/discord-oauth2-php": "^1.5"
     }
 }

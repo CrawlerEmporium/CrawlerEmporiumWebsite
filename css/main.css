@@ -421,3 +421,51 @@ ul.social-icons {
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(84, 81, 81);
 }
+
+.logo {
+    float: left;
+    font-size: 25px;
+    margin-left: 30px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: white;
+}
+
+.log-in {
+    font-size: 14px;
+    color: white;
+    background-color: #7289da;
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    border: None;
+}
+
+.log-in:hover {
+    cursor: pointer;
+}
+
+.response-block {
+    margin: 15px;
+    padding: .5em;
+    word-wrap: break-word;
+    width: 90%;
+    background-color: #2f3136;
+    border: 1px solid #202225;
+    color: #b9bbbe;
+}

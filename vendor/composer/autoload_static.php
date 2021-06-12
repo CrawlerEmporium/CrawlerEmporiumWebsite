@@ -12,6 +12,10 @@ class ComposerStaticInitff6cc0b7b3423e65bf9fe3f8db3d4ef3
     );
 
     public static $prefixLengthsPsr4 = array (
+        'X' => 
+        array (
+            'Xwilarg\\Discord\\' => 16,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -31,6 +35,10 @@ class ComposerStaticInitff6cc0b7b3423e65bf9fe3f8db3d4ef3
     );
 
     public static $prefixDirsPsr4 = array (
+        'Xwilarg\\Discord\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/xwilarg/discord-oauth2-php/src',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
