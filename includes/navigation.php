@@ -31,7 +31,7 @@
                 <?php
                 if (isset($_COOKIE['Access_token'])) {
                     echo '<li class="nav-item">';
-                    echo '<a class="nav-link" href="../servers/index.php">Server Administration</a>';
+                    echo '<a class="nav-link" href="../servers/index.php">Manage Servers</a>';
                     echo '</li>';
                 }
                 ?>

@@ -38,20 +38,27 @@ $title = "Server Index";
     </p>
 </div>
 
-<div class="bg-dark pb-5">
-    <div class="row d-flex justify-content-center card-columns cardds">
-        <?php
-        $guilds = $client['guilds'];
-        foreach ($guilds as $guild) {
+<div class="bg-dark pb-5 pt-5">
+    <?php
+    $guilds = $client['guilds'];
+    $column = 1;
+    $row = true;
+    foreach ($guilds as $guild) {
+        if ($row) {
+            echo '<div class="row d-flex justify-content-center card-columns mt-5 mb-5">';
+            $row = false;
+        }
+        if ($guild['owner'] || $guild['permissions'] == 2147483647 || ($guild['permissions'] & 0x20) != 0) {
+            $column++;
             if ($guild['icon'] != null) {
                 $extention = is_animated($guild['icon']);
-                $icon = "<img src='https://cdn.discordapp.com/icons/" . $guild['id'] . "/" . $guild['icon'] . $extention . "' class='mini-image ml-1' alt='' />";
+                $icon = "<img src='https://cdn.discordapp.com/icons/" . $guild['id'] . "/" . $guild['icon'] . $extention . "' class='mini-image mr-2' alt='' />";
             } else {
-                $icon = " ";
+                $icon = "<img src='../assets/CrawlerEmporium.png' class='mini-image mr-2' alt='' />";
             }
             ?>
-            <div class="card text-white bg-dark mb-3">
-                <a href="../servers/server.php" class="text-decoration-none text-white">
+            <div class="card text-white bg-dark mb-3 cards-width">
+                <a href="../servers/server.php?id=<?php echo $guild['id'] ?>" class="text-decoration-none text-white">
                     <div class="card-header text-center">
                         <?php
                         echo $icon;
@@ -60,17 +67,26 @@ $title = "Server Index";
                     </div>
                     <div class="card-body card-body-height">
                         <p class="card-text">
-                            <?php
-                            echo $guild['id'];
-                            ?>
                         </p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <?php
+                        echo "ID: " . $guild['id'];
+                        ?>
                     </div>
                 </a>
             </div>
             <?php
         }
-        ?>
-    </div>
+        if ($column == 6) {
+            echo '</div>';
+            $row = true;
+            $column = 1;
+        } else {
+            $row = false;
+        }
+    }
+    ?>
 </div>
 
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
