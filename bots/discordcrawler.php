@@ -1,6 +1,5 @@
 <?php
-require '../vendor/autoload.php';
-require_once('../includes/config.php');
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/loads.php";
 
 if (isset($mongoDB)) {
     $db = $mongoDB->lookup->help;
@@ -25,13 +24,13 @@ $prefix = "$";
 </head>
 
 <body>
-<?php include '../includes/navigation.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/navigation.php'; ?>
 
 <div class="jumbotron text-center bg-transparent">
-    <?php include '../includes/commands.php'; ?>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/commands.php'; ?>
 </div>
 
-<?php include '../includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"

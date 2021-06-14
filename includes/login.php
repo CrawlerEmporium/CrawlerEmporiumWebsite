@@ -1,13 +1,10 @@
 <?php
-require '../vendor/autoload.php';
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/loads.php";
 
-# Including all the required scripts for demo
-require "../includes/config.php";
-require "../includes/functions.php";
-?>
-
-<?php
-
-echo $oauth2->startRedirection([$scopes]);
-
+try  {
+    $authorizationLink = $request->getAuthorizationUrl(); // Generate Authorization link
+    redirect($authorizationLink); // redirects to auth link
+} catch (Exception $e) {
+    die("Error : " . $e->getMessage()); // Die to errors
+}
 ?>

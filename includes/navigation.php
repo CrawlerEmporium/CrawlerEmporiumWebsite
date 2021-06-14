@@ -2,10 +2,20 @@
     <div class="container-fluid container">
         <a class="navbar-brand" href="../index.php">
             <?php
-            if ($title != "Crawler Emporium") {
-                echo '<img src="../assets/' . $title . '.png" alt="" width="50" height="50" class="rounded-circle"> &nbsp;';
+            if (isset($_COOKIE['Access_token'])) {
+                $authToken = $_COOKIE['Access_token'];
+                $client = $request->fetchData($authToken);
+                $user = $client["identify"];
+                $extention = is_animated($user['avatar']);
+                echo '<img src="https://cdn.discordapp.com/avatars/' . $user['id'] . '/' . $user['avatar'] . $extention . '" class="rounded-circle mini-image"/>';
+                $temp_title = $user['username'];
+                echo '<span class="ml-2">' . $temp_title . '</span>';
+            } else {
+                if ($title != "Crawler Emporium") {
+                    echo '<img src="../assets/' . $title . '.png" alt="" class="rounded-circle mini-image">';
+                }
+                echo '<span class="ml-2">' . $title . '</span>';
             }
-            echo '<span>' . $title . '</span>'
             ?>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -18,6 +28,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../index.php">Home</a>
                 </li>
+                <?php
+                if (isset($_COOKIE['Access_token'])) {
+                    echo '<li class="nav-item">';
+                    echo '<a class="nav-link" href="../servers/index.php">Server Administration</a>';
+                    echo '</li>';
+                }
+                ?>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="commandsdrop" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Commands </a>
                     <ul class="dropdown-menu bgn" aria-labelledby="commandsdrop">
@@ -43,12 +60,19 @@
                     </ul>
                 </li>
             </ul>
-<!--            <div class="d-flex ml-auto" id="headerlogin">-->
-<!--                <li class="nav-item" style="list-style: none;">-->
-<!--                    <a class="nav-link btn btn-outline-secondary login" href="./includes/login.php">Login</a>-->
-<!--                </li>-->
-<!--            </div>-->
-
+            <div class="d-flex ml-auto" id="headerlogin">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" class="list-unstyled">
+                        <?php
+                        if (isset($_COOKIE['Access_token'])) {
+                            echo '<a href="../includes/logout.php"><button class="log-in">LOGOUT</button></a>';
+                        } else {
+                            echo '<a class="nav-link btn btn-outline-secondary login" href="../includes/login.php">Login</a>';
+                        }
+                        ?>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

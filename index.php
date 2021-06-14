@@ -1,4 +1,5 @@
 <?php
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/loads.php";
 $title = "Crawler Emporium"
 ?>
 <!DOCTYPE html>
@@ -15,7 +16,7 @@ $title = "Crawler Emporium"
 </head>
 
 <body>
-<?php include './includes/navigation.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/navigation.php'; ?>
 
 <div class="jumbotron text-center bg-transparent">
     <h1 class="display-3 htext"><?php echo $title; ?></h1>
@@ -87,7 +88,7 @@ $title = "Crawler Emporium"
     </div>
 </div>
 
-<?php include './includes/footer.php'; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
